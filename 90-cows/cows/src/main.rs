@@ -1,4 +1,6 @@
 
+
+
 #[derive(Clone, Copy)]
 struct Constraints {
   border: f64,
@@ -55,7 +57,7 @@ impl Cow {
   }
 
 
-  fn move_away(&mut self, mut boids: Vec<Cow>, min_distance: f64) {
+  fn move_away(&mut self, boids: &Vec<Cow>, min_distance: f64) {
     let mut distance_x = 0.0;
     let mut distance_y = 0.0;
     let mut num_close = 0.0;
@@ -153,7 +155,7 @@ fn main() {
       let former_x = cow.x;
       let former_y = cow.y;
 
-      //cow.move_away(cows_list, 15.0);
+      cow.move_away(*cows_list, 15.0);
       cow.moving();
 
       println!("{}", cow.distance(bob));
