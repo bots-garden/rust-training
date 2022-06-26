@@ -55,7 +55,7 @@ impl Cow {
   }
 
 
-  fn move_away(&mut self, boids: &mut Vec<Cow>, min_distance: f64) {
+  fn move_away(&mut self, mut boids: Vec<Cow>, min_distance: f64) {
     let mut distance_x = 0.0;
     let mut distance_y = 0.0;
     let mut num_close = 0.0;
@@ -146,22 +146,24 @@ fn main() {
 
   let mut index = 0;
 
+
   while index < 5 {
 
-    for cow in cows_list.iter_mut() {
-
+    cows_list.iter_mut().for_each(|cow| {
       let former_x = cow.x;
       let former_y = cow.y;
 
-      cow.move_away(cows_list, 15.0);
-
+      //cow.move_away(cows_list, 15.0);
       cow.moving();
 
       println!("{}", cow.distance(bob));
 
       println!("{}: {} {}", cow.id, cow.x, cow.y);
 
-    }
+
+    });
+
+
     index+=1;
   }
 
