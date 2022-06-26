@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "pkief.material-icon-theme",
+    "rust-lang.rust",
+    "bungcip.better-toml",
+    "aaron-bond.better-comments"
+  ]
+}

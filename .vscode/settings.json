@@ -1,0 +1,7 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Tomorrow",
+  "terminal.integrated.fontSize": 16,
+  "editor.fontSize": 16,
+  "terminal.integrated.defaultProfile.linux": "bash",
+}
