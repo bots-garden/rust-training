@@ -149,7 +149,7 @@ fn main() {
 
   while index < 5 {
 
-    cows_list.iter_mut().for_each(|cow| {
+    for cow in cows_list.iter_mut() {
       let former_x = cow.x;
       let former_y = cow.y;
 
@@ -161,7 +161,7 @@ fn main() {
       println!("{}: {} {}", cow.id, cow.x, cow.y);
 
 
-    });
+    };
 
 
     index+=1;
